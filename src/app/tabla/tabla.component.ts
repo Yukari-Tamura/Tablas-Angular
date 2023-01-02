@@ -49,7 +49,6 @@ export class TablaComponent implements OnInit {
   estructurador(item:any) {
       const {id, mes, valor1, valor2} = item;
      
-      
       switch(mes){
         case 1:
           this.arrayEnero.push({id: id, mes:mes, valor1: valor1, valor2: valor2}); 
