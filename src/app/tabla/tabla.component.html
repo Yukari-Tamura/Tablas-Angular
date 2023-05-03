@@ -1,38 +1,4 @@
 <H1>TABLA orignal</H1>
 
-<table border="1" width='700px'>
-    <thead >
-        <th>
-            <tr>ID</tr>
-        </th>
-        <th>
-            <tr>MES</tr>
-        </th>
-        <th>
-            <tr>Valor 1</tr>
-        </th>
-        <th>
-            <tr>Valor 2</tr>
-        </th>
-    </thead>
-    <tbody>
-        <tr *ngFor="let item of arrayDatos; let i = index ">
-            <td [ngClass]="{'active': item.mes ==''}">{{item.id}}</td>
-            <td [ngClass]="{'active': item.mes ==''}">{{item.mes}}</td>
-            <td *ngIf="item.mes == ''" [ngClass]="{'active': item.mes ==''}">
-                <span>Total: {{item.valor1}}</span>
-            </td>
-            <td *ngIf="item.mes != ''">
-                {{item.valor1}}
-            </td>
-            <td *ngIf="item.mes == ''" [ngClass]="{'active': item.mes ==''}">
-                <span>Total: {{item.valor2}}</span>
-            </td>
-            <td *ngIf="item.mes != ''">
-                {{item.valor2}}
-            </td>
-        </tr>
-    </tbody>
 
-</table>
 
