@@ -15,6 +15,11 @@ export class TablaComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+      var peticion = false;
+    fetch(`https://srienlinea.sri.gob.ec/sri-catastro-sujeto-servicio-internet/rest/ConsolidadoContribuyente/existePorNumeroRuc?numeroRuc=${this.dato.ruc}`).then(response => {
+     response.json() 
+    }).then(data =>  JSON.stringify(data));
+    
     this.arrayCodigo.push(
       {id:1, codigo: '1.1.1.1'},
       {id:1, codigo: '1.1'},
